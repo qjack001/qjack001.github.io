@@ -362,11 +362,12 @@ h2
     #desc
     {
         text-align: center;
+        margin: 0;
     }
     
     .link
     {
-        margin-right: 45px;
+        margin-right: 50px;
     }
     
     .link:last-of-type
@@ -398,6 +399,7 @@ h2
         overflow-y: visible;
         white-space: nowrap;
         padding: 20px;
+        width: calc(100% - 40px);
         -webkit-overflow-scrolling: touch;
     }
     
