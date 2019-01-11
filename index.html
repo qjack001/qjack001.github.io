@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Jack Guinane</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <h1 id="logo" class="hidden">Jack Guinane</h1>
+        <h2>I’m <span id="name">Jack Guinane</span>, <span id="name-br"><br></span>a developer and designer currently studying Computer Science.</h2>
+        <p id="desc"><a href="https://github.com/qjack001" class="link">Github</a> <a href="" class="link">Resume</a> <a href="mailto:jackguinane@gmail.com" class="link">Email</a> <span id="desc-scroll">or scroll down to see what I've been working on.</span></p>
+        
+        <div id="projects">
+            
+            <a href="https://github.com/qjack001/Magic-Smike#------" class="card" style="color:#000;background-image: url('./img/ms.png')">
+                <div>
+                <h3>Magic Smike</h3>
+                <p>Dashboard for IoT smart bike project.</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/qjack001/Knowledge-Tree-Consulting" class="card" style="background-image: url('./img/kt.png');">
+                <div>
+                <h3>Knowledge Tree Consulting</h3>
+                <p>Website design &amp; development for a consulting firm.</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/qjack001/Wherehaus#--------wherehaus" class="card" style="color:#2682dd;background-image: url('./img/wh.png');">
+                <div>
+                <h3>Wherehaus</h3>
+                <p>An inventory tracking app commissioned by Etobicoke Iron Works.</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/qjack001/Spotted#------" class="card" style="color:#2d8143;background-image: url('./img/sp.png');">
+                <div>
+                <h3>Spotted</h3>
+                <p>A website for spotting rad houseplants, and cataloging how to care for them.</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/qjack001/Digital-Business-Card#--------digital-business-card" class="card" style="color:#eee;background-image: url('./img/db.png');">
+                <div>
+                <h3>Digital Business Card</h3>
+                <p>A super-tiny website providing a quick description of what I do and where to find me.</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/qjack001/Web-Based-Windows#--------web-based-windows" class="card" style="color:#000;background-image: url('./img/wb.png');">
+                <div>
+                <h3>Web-based Windows</h3>
+                <p>An experimental, brutalist website that imitates early Windows operating systems.</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/qjack001/Brewhaha#--------brewhaha" class="card" style="color:#3d46b0;background-image: url('./img/bh.png');">
+                <div>
+                <h3>Brewhaha</h3>
+                <p>Web-menu for a fictional coffee shop.</p>
+                </div>
+            </a>
+            
+            <a href="https://github.com/qjack001/FilmRPG" class="card" style="color:#fff;background-image: url('./img/ss.png');">
+                <div>
+                <h3>Silverscreen</h3>
+                <p>A TTRPG based on the logic of movies.</p>
+                </div>
+            </a>
+            
+        </div>
+        
+        <a href="mailto:jackguinane@gmail.com" tabindex="1" id="mail-bubble" onfocus="showText()" onblur="hideText()" onmouseover="showText()" onmouseout="hideText()"><p id="mail">@</p></a>
+        <div id="mail-container">
+            <div id="circle">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+                    <defs>
+                        <path id="circlePath" d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
+                    </defs>
+                    <circle cx="150" cy="100" r="75" fill="none"/>
+                    <g>
+                        <use xlink:href="#circlePath" fill="none"/>
+                        <text fill="#ff4c1e">
+                            <textPath xlink:href="#circlePath">Email me! &nbsp; &nbsp; Email me! &nbsp; &nbsp; Email me! &nbsp; &nbsp; Email me!</textPath>
+                        </text>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div id="frame"></div>
+
+        <script>
+            function showText() {document.getElementById("mail-container").style.opacity = "1";}
+            function hideText() {document.getElementById("mail-container").style.opacity = "0";}
+            window.onscroll = function()
+            {
+                var scrollPosY = window.pageYOffset | document.body.scrollTop; 
+                var logo = document.getElementById("logo");
+                if(scrollPosY > 300) 
+                {
+                    logo.className = ('');
+                } 
+                else if(scrollPosY <= 300) 
+                {
+                    logo.className =  ('hidden');
+                }
+            };
+        </script>
+    </body>
+</html>

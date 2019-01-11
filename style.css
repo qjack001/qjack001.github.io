@@ -1,0 +1,412 @@
+@font-face
+{
+    font-family: "circ";
+    src: url('./font/webfont.eot');
+    src: url('./font/webfont.eot?#iefix') format('embedded-opentype'),
+        url('./font/webfont.woff') format('woff'),
+        url('./font/webfont.woff2') format('woff2'),
+        url('./font/webfont.ttf') format('truetype'),
+        url('./font/webfont.svg#svgFontName') format('svg');
+    font-weight: normal;
+}
+
+@font-face
+{
+    font-family: "circ";
+    src: url('./font/webfont-bold.eot');
+    src: url('./font/webfont-bold.eot?#iefix') format('embedded-opentype'),
+        url('./font/webfont-bold.woff') format('woff'),
+        url('./font/webfont-bold.woff2') format('woff2'),
+        url('./font/webfont-bold.ttf') format('truetype'),
+        url('./font/webfont-bold.svg#svgFontName') format('svg');
+    font-weight: bold;
+}
+
+html
+{
+    font-family: "circ", sans-serif;
+    background-color: aliceblue;
+    color: #05f;
+}
+
+body
+{
+    margin: 100px;
+}
+
+.card
+{
+    width: 250px;
+    text-align: center;
+    margin: auto;
+    height: 350px;
+    border-radius: 6px;
+    box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(14, 83, 220, 0.23), 0px 3px 20px 2px rgba(14, 83, 220, 0.35);
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    display: table;
+    transition: transform 0.2s ease;
+}
+
+.card:hover, .card:focus
+{
+    transform: translateY(-15px);
+}
+
+.card div
+{ 
+    padding: 20px;
+    display: table-cell; vertical-align: middle;
+}
+
+h3
+{
+    font-size: 1.7rem;
+}
+
+#projects
+{
+    width: 100%;
+    margin: 200px 0;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, 250px );
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+a
+{
+    color: #ff4c1e;
+    text-decoration: none;
+    outline: none;
+}
+
+.link
+{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.link::after
+{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff4c1e;
+    transition: width 0.3s;
+}
+
+.link:hover::after, .link:focus::after
+{
+    opacity: 1;
+    width: 100%;
+}
+
+#logo
+{
+    background-color: aliceblue;
+    color: #05f;
+    font-size: 1rem;
+    text-align: center;
+    width: 7rem;
+    padding: 0 5px;
+    position: fixed;
+    top: -1px;
+    left: calc(50% - 3.5rem);
+    z-index: -90;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.8s ease;
+}
+
+#logo.hidden
+{
+    width: 0px;
+    padding: 0px;
+    left: 50%;
+    transition: all 0.4s ease-in;
+}
+
+#frame
+{
+    pointer-events: none;
+    z-index: -99;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    border: 2px solid #05f;
+    border-radius: 3px;
+}
+
+#name
+{
+    -webkit-text-stroke-width: 0px;
+    color: #05f;
+    font-size: 3.3rem;
+}
+
+#name-br
+{
+    display: none;
+}
+
+h2
+{
+    max-width: 750px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #05f;
+    color: white;
+    font-size: 3rem;
+}
+
+#mail
+{
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+    line-height: 50px;
+}
+
+#mail-bubble
+{
+    position: fixed;
+    z-index: 99;
+    cursor: pointer;
+    background-color: #ff4c1e;
+    text-align: center;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    right: 10px;
+    transform: rotate(10deg);
+    transition: transform 0.2s ease;
+}
+
+#mail-bubble:hover, #mail-bubble:focus
+{
+    transform: rotate(10deg) scale(1.8);
+}
+
+#mail-container 
+{ 
+    margin: 0%; 
+    pointer-events: none;
+    position: fixed;
+    top: -240px;
+    width: 400px;
+    right: -170px;
+    opacity: 0;
+    z-index: 99;
+    transition: opacity 0.2s ease 0.05s;
+}
+
+#circle 
+{ 
+    position: relative; 
+    width: 100%; 
+    padding-bottom: 100%; 
+    overflow: hidden; 
+}
+
+#circle text 
+{ 
+    font-family: 'Circular Std'; 
+    font-size: 16px; 
+    font-weight: bold; 
+    color: #ff4c1e;
+}
+
+#circle svg 
+{ 
+    position: absolute; 
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 540px;
+
+    -webkit-animation-name: rotate;
+    -moz-animation-name: rotate;
+    -ms-animation-name: rotate;
+    -o-animation-name: rotate;
+    animation-name: rotate;
+    -webkit-animation-duration: 5s;
+    -moz-animation-duration: 5s;
+    -ms-animation-duration: 5s;
+    -o-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -ms-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate 
+{
+    from { -webkit-transform: rotate(360deg); }
+    to { -webkit-transform: rotate(0); }
+}
+
+@-moz-keyframes rotate 
+{
+    from { -moz-transform: rotate(360deg); }
+    to { -moz-transform: rotate(0); }
+}
+
+@-ms-keyframes rotate 
+{
+    from { -ms-transform: rotate(360deg); }
+    to { -ms-transform: rotate(0); }
+}
+
+@-o-keyframes rotate 
+{
+    from { -o-transform: rotate(360deg); }
+    to { -o-transform: rotate(0); }
+}
+
+@keyframes rotate 
+{
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0); }
+}
+
+@media screen and (max-width:1010px)
+{
+    body
+    {
+        margin: 100px 20px;
+    }
+    
+    h2
+    {
+        font-size: 2rem;
+        -webkit-text-stroke-width: 1.5px;
+        margin: 40px;
+        
+    }
+    
+    #name
+    {
+        font-size: 2.2rem;
+    }
+    
+    #desc
+    {
+        margin: 40px;
+    }
+    
+    .card
+    {
+        width: 160px;
+        height: 226px;
+        font-size: 12px;
+    }
+    
+    .card:hover, .card:focus
+    {
+        transform: translateY(-10px);
+    }
+    
+    .card h3
+    {
+        font-size: 1.2rem;
+    }
+    
+    .card p
+    {
+        font-size: 14px;
+    }
+    
+    .card div
+    {
+        padding: 8px;
+    }
+    
+    #projects
+    {
+        margin: 100px 0;
+        grid-template-columns: repeat( auto-fit, 160px );
+        grid-column-gap: 20px;
+    }
+}
+
+@media screen and (max-width:690px)
+{
+    #desc-scroll
+    {
+        display: block;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width:475px)
+{
+    #desc-scroll
+    {
+        display: none;
+    }
+    
+    #desc
+    {
+        text-align: center;
+    }
+    
+    .link
+    {
+        margin-right: 50px;
+    }
+    
+    .link:last-of-type
+    {
+        margin-right: 0px;
+    }
+    
+    h2
+    {
+        font-size: 1.8rem;
+        -webkit-text-stroke-width: 1.1px;
+    }
+    
+    #name
+    {
+        font-size: 1.9rem;
+    }
+    
+    #name-br
+    {
+        display: inline;
+    }
+    
+    #projects
+    {
+        margin: 80px 0 0 0;
+        display: block;
+        overflow-x: auto;
+        overflow-y: visible;
+        white-space: nowrap;
+        padding: 20px;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .card
+    {
+        display: inline-block;
+        margin: 10px;
+        white-space:normal;
+        
+    }
+}
+
