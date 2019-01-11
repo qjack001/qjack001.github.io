@@ -407,7 +407,7 @@ h2
         font-size: 2rem;
         -webkit-text-stroke-width: 1.5px;
         margin: 40px;
-        
+        text-shadow:  -2px 2px aliceblue, 2px -2px aliceblue, -2px -2px aliceblue, 2px 2px aliceblue, -1px -2px aliceblue, 1px -2px aliceblue, -1px 2px aliceblue, 1px 2px aliceblue, 2px -1px aliceblue, 2px 1px aliceblue, -2px -1px aliceblue, -2px 1px aliceblue;
     }
     
     #name
