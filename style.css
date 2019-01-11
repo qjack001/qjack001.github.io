@@ -76,7 +76,7 @@ h3
     align-items: center;
     justify-content: center;
     
-    animation: fade-up 0.5s forwards 1.4s;
+    animation: fade-up 0.5s forwards 2.4s;
     visibility: hidden;
 }
 
@@ -145,19 +145,19 @@ a
     height: calc(100% - 40px);
     border: 2px solid #05f;
     border-radius: 3px;
-    animation: fade-in 0.7s forwards 1.2s;
+    animation: fade-in 0.7s forwards 2.2s;
     visibility: hidden;
 }
 
 #title
 {
-    animation: fade-up 0.5s forwards 1s;
+    animation: fade-up 0.5s forwards 2s;
     visibility: hidden;
 }
 
 #desc
 {
-    animation: fade-up 0.5s forwards 1.2s;
+    animation: fade-up 0.5s forwards 2.2s;
     visibility: hidden;
     text-shadow: 
         -4px 2px aliceblue,
@@ -235,7 +235,7 @@ h2
     right: 10px;
     transform: rotate(10deg);
     transition: transform 0.2s ease;
-    animation: fade-in 0.5s forwards 1.0s;
+    animation: fade-in 0.5s forwards 2.0s;
     visibility: hidden;
 }
 
