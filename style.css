@@ -366,7 +366,7 @@ h2
     
     .link
     {
-        margin-right: 50px;
+        margin-right: 45px;
     }
     
     .link:last-of-type
@@ -376,13 +376,13 @@ h2
     
     h2
     {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         -webkit-text-stroke-width: 1.1px;
     }
     
     #name
     {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
     }
     
     #name-br
@@ -392,7 +392,7 @@ h2
     
     #projects
     {
-        margin: 80px 0 0 0;
+        margin: 50px 0 0 0;
         display: block;
         overflow-x: auto;
         overflow-y: visible;
@@ -406,7 +406,9 @@ h2
         display: inline-block;
         margin: 10px;
         white-space:normal;
-        
+        width: 190px;
+        height: 269px;
+        font-size: 14px;
     }
 }
 
