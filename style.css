@@ -516,7 +516,8 @@ h2
         overflow-x: auto;
         overflow-y: visible;
         white-space: nowrap;
-        padding: 20px;
+        padding: 40px;
+        width: calc(100% - 40px);
         -webkit-overflow-scrolling: touch;
     }
     
