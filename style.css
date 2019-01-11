@@ -75,6 +75,9 @@ h3
     grid-row-gap: 30px;
     align-items: center;
     justify-content: center;
+    
+    animation: fade-up 0.5s forwards 1.4s;
+    visibility: hidden;
 }
 
 a
@@ -142,6 +145,33 @@ a
     height: calc(100% - 40px);
     border: 2px solid #05f;
     border-radius: 3px;
+    animation: fade-in 0.7s forwards 1.2s;
+    visibility: hidden;
+}
+
+#title
+{
+    animation: fade-up 0.5s forwards 1s;
+    visibility: hidden;
+}
+
+#desc
+{
+    animation: fade-up 0.5s forwards 1.2s;
+    visibility: hidden;
+    text-shadow: 
+        -4px 2px aliceblue,
+        4px -2px aliceblue,
+        -4px -2px aliceblue,
+        4px 2px aliceblue,
+        -2px 2px aliceblue,
+        2px -2px aliceblue,
+        -2px -2px aliceblue,
+        2px 2px aliceblue,
+        -0px 2px aliceblue,
+        0px -2px aliceblue,
+        -0px -2px aliceblue,
+        0px 2px aliceblue;
 }
 
 #name
@@ -163,6 +193,24 @@ h2
     -webkit-text-stroke-color: #05f;
     color: white;
     font-size: 3rem;
+    text-shadow: 
+        -4px 4px aliceblue,
+        4px -4px aliceblue,
+        -4px -4px aliceblue,
+        4px 4px aliceblue,
+        -3px -4px aliceblue,
+        0px -4px aliceblue,
+        3px -4px aliceblue,
+        -3px 4px aliceblue,
+        0px 4px aliceblue,
+        3px 4px aliceblue,
+        4px -3px aliceblue,
+        4px 0px aliceblue,
+        4px 3px aliceblue,
+        -4px -3px aliceblue,
+        -4px 0px aliceblue,
+        -4px 3px aliceblue;
+        
 }
 
 #mail
@@ -187,6 +235,8 @@ h2
     right: 10px;
     transform: rotate(10deg);
     transition: transform 0.2s ease;
+    animation: fade-in 0.5s forwards 1.0s;
+    visibility: hidden;
 }
 
 #mail-bubble:hover, #mail-bubble:focus
@@ -282,6 +332,68 @@ h2
     from { transform: rotate(360deg); }
     to { transform: rotate(0); }
 }
+
+
+@-webkit-keyframes fade-up
+{
+    from { -webkit-transform: translateY(50px); opacity: 0; visibility: visible; }
+    to { -webkit-transform: translateY(0px); opacity: 1; visibility: visible; }
+}
+
+@-moz-keyframes fade-up
+{
+    from { -moz-transform: translateY(50px); opacity: 0; visibility: visible; }
+    to { -moz-transform: translateY(0px); opacity: 1; visibility: visible; }
+}
+
+@-ms-keyframes fade-up
+{
+    from { -ms-transform: translateY(50px); opacity: 0; visibility: visible; }
+    to { -ms-transform: translateY(0px); opacity: 1; visibility: visible; }
+}
+
+@-o-keyframes fade-up
+{
+    from { -o-transform: translateY(50px); opacity: 0; visibility: visible; }
+    to { -o-transform: translateY(0px); opacity: 1; visibility: visible; }
+}
+
+@keyframes fade-up 
+{
+    from { transform: translateY(50px); opacity: 0; visibility: visible; }
+    to { transform: translateY(0px); opacity: 1; visibility: visible; }
+}
+
+@-webkit-keyframes fade-in
+{
+    from { opacity: 0; visibility: visible; }
+    to { opacity: 1; visibility: visible; }
+}
+
+@-moz-keyframes fade-in
+{
+    from { opacity: 0; visibility: visible; }
+    to { opacity: 1; visibility: visible; }
+}
+
+@-ms-keyframes fade-in
+{
+    from { opacity: 0; visibility: visible; }
+    to { opacity: 1; visibility: visible; }
+}
+
+@-o-keyframes fade-in
+{
+    from { opacity: 0; visibility: visible; }
+    to { opacity: 1; visibility: visible; }
+}
+
+@keyframes fade-in 
+{
+    from { opacity: 0; visibility: visible; }
+    to { opacity: 1; visibility: visible; }
+}
+
 
 @media screen and (max-width:1010px)
 {
