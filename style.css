@@ -391,15 +391,19 @@ h2
         display: inline;
     }
     
+    .compsci
+    {
+        display: none;
+    }
+    
     #projects
     {
-        margin: 50px 0 0 0;
+        margin: 50px 0 0 -20px;
         display: block;
         overflow-x: auto;
         overflow-y: visible;
         white-space: nowrap;
         padding: 20px;
-        width: calc(100% - 40px);
         -webkit-overflow-scrolling: touch;
     }
     
@@ -409,8 +413,9 @@ h2
         margin: 10px;
         white-space:normal;
         width: 190px;
-        height: 269px;
+        height: 219px;
         font-size: 14px;
+        padding-top: 50px;
     }
 }
 
