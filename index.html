@@ -134,8 +134,12 @@
         <div id="frame"></div>
 
         <script>
+            document.body.classList.add('loading');
+
+            function showPage() {document.body.classList.add('finished');}
             function showText() {document.getElementById("mail-container").style.opacity = "1";}
             function hideText() {document.getElementById("mail-container").style.opacity = "0";}
+            window.addEventListener("load", showPage);
             window.onscroll = function()
             {
                 var scrollPosY = window.pageYOffset | document.body.scrollTop; 
