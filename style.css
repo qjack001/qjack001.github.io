@@ -67,6 +67,23 @@ body
     display: table-cell; vertical-align: middle;
 }
 
+
+#quinn-card
+{
+    color:#000;
+    background-image: url('./img/qp-l.jpg');
+}
+
+@media (prefers-color-scheme: dark)
+{
+    #quinn-card
+    {
+        color:#fff;
+        background-image: url('./img/qp-d.jpg');
+    }
+}
+
+
 h3
 {
     font-size: 1.7rem;
