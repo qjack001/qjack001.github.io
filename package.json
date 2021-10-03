@@ -1,0 +1,19 @@
+{
+	"name": "guinane.xyz",
+	"version": "2.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"lint": "eslint . && textlint .",
+		"lint:fix": "eslint . --fix && textlint . --fix"
+	},
+	"dependencies": {
+		"astro": "^0.20.5",
+		"vue": "^3.2.19"
+	},
+	"devDependencies": {
+		"eslint-config-goodbyte-styleguide": "^0.0.7",
+		"textlint-rule-preset-goodbyte-styleguide": "^0.0.5"
+	}
+}
