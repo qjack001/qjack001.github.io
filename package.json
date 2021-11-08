@@ -9,8 +9,8 @@
 		"lint:fix": "eslint . --fix && textlint . --fix"
 	},
 	"dependencies": {
-		"astro": "^0.20.5",
-		"vue": "^3.2.19"
+		"@astrojs/renderer-vue": "^0.1.9",
+		"astro": "^0.20.12"
 	},
 	"devDependencies": {
 		"eslint-config-goodbyte-styleguide": "^0.0.7",

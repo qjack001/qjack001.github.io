@@ -1,0 +1,131 @@
+---
+import Metadata from '../components/metadata.astro'
+import GlobalStyle from '../components/global-style.astro'
+import Logo from '../components/logo.vue'
+import BigButton from '../components/big-button.vue'
+import BigText from '../components/big-text.vue'
+import LinkList from '../components/link-list.vue'
+
+const { content } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<Metadata/>
+		<meta name="theme-color" content={content.background}>
+		<title>{content.title} | Jack Guinane</title>
+		<GlobalStyle/>
+	</head>
+	<body class="project-layout">
+		<article>
+			<section id="heading" style={`
+				--foreground: ${content.foreground};
+				--background: ${content.background};
+				--accent:     ${content.accent};
+			`}>
+				<Logo/>
+				<!-- TODO: replace button icons with SVGs -->
+				<BigButton text="All projects" dir="left" href="../">↩</BigButton>
+				<div class="heading-layout frame">
+					<div class="heading-text">
+						<BigText animate>
+							<h1>{content.description}</h1>
+						</BigText>
+						<LinkList links={
+								[
+									{ name: 'Go to website',    href: content.website },
+									{ name: 'See full project', href: content.full    },
+									{ name: 'Read paper',       href: content.read    },
+									{ name: 'View on Github',   href: content.github  },
+								]
+								.filter((link) => link.href) // only include links that exist
+							}
+						/>
+					</div>
+					<!-- <picture class="hero-img">
+						<source type="image/avif" src={`/assets/${content.img}.avif`}/>
+						<source type="image/webp" src={`/assets/${content.img}.webp`}/>
+						<img src={`/assets/${content.img}.png`} alt={content.alt}/>
+					</picture> -->
+				</div>
+			</section>
+			<section id="content" class="frame">
+				<slot/>
+			</section>
+		</article>
+	</body>
+</html>
+
+<style scoped>
+	body
+	{
+		margin: 0;
+	}
+
+	.frame
+	{
+		margin: 0 20px 20px 20px;
+		padding: 20px;
+		border: 2px solid var(--foreground);
+		border-radius: 3px;
+	}
+
+	#heading
+	{
+		background: var(--background);
+		color: var(--foreground);
+		padding-top: 20px;
+	}
+
+	#heading .heading-layout
+	{
+		margin-top: 0;
+		margin-bottom: 0;
+		border-bottom: none;
+		border-radius: 3px 3px 0 0;
+
+
+		padding: 20px;
+		padding-bottom: 60px;
+		display: grid;
+		grid-template-columns: 2fr 3fr;
+	}
+
+	.heading-text
+	{
+		grid-column: 2;
+	}
+
+	.hero-img
+	{
+		grid-column: 1;
+		grid-row: 1;
+		position: absolute;
+	}
+
+	.hero-img img
+	{
+		max-width: 50%;
+		max-height: 800px;
+	}
+
+	#content
+	{
+		border-top: none;
+		border-radius: 0 0 3px 3px;
+	}
+
+	@media screen and (max-width: 740px)
+	{
+		#heading .heading-layout
+		{
+			grid-template-columns: 1fr;
+			padding: 40px;
+		}
+
+		.hero-img
+		{
+			display: none;
+		}
+	}
+</style>

@@ -1,187 +1,96 @@
+---
+import Metadata from "../components/metadata.astro"
+import GlobalStyle from "../components/global-style.astro"
+import Logo from "../components/logo.vue"
+import AboutMe from "../components/about-me.vue"
+import ProjectsList from "../components/projects-list.astro"
+import BigButton from "../components/big-button.vue"
+---
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <Metadata/>
+		<meta name="theme-color" content="#f0f8ff" media="(prefers-color-scheme: light)">
+		<meta name="theme-color" content="#05f" media="(prefers-color-scheme: dark)">
         <title>Jack Guinane</title>
-        <meta name="author" content="Jack Guinane" />
-        <link href="style.css" rel="stylesheet" type="text/css">
-        <link rel="icon" href="./favicon.png" type="image/png" />
-        <link id="favicon" rel="shortcut icon" type="image/png" href="./favicon.png">
+		<GlobalStyle/>
     </head>
-
     <body>
-        <h1 id="logo" class="hidden">Jack Guinane</h1>
-        <h2 id="title">I’m <span id="name">Jack Guinane</span>, <span id="name-br"><br></span>a developer and designer currently studying Comp<span class="compsci">uter </span>Sci<span class="compsci">ence</span>.</h2>
-        <p id="desc"><a href="https://github.com/qjack001" class="link">Github</a> <a href="https://guinane.xyz/Resume.pdf" class="link">Resume</a> <a href="mailto:jackguinane@gmail.com" class="link">Email</a> <span id="desc-scroll">or scroll down to see what I’ve been working on.</span></p>
-        
-        <div id="projects">
-            
-            <a href="https://guinane.xyz/Book-Club/" class="card" style="color:#000;background-image: url('./img/bc.png')">
-                <div>
-                <h3>Book Club</h3>
-                <p>A website to record books for my family’s book club.</p>
-                </div>
-            </a>
-            
-            <a href="https://knowledgetreeconsulting.ca" class="card" style="background-image: url('./img/kt.png');">
-                <div>
-                <h3>Knowledge Tree Consulting</h3>
-                <p>Website design &amp; development for a consulting firm.</p>
-                </div>
-            </a>
-            
-            <a href="https://github.com/qjack001/Wherehaus#--------wherehaus" class="card" style="color:#2682dd;background-image: url('./img/wh.png');">
-                <div>
-                <h3>Wherehaus</h3>
-                <p>An inventory tracking app commissioned by Etobicoke Iron Works.</p>
-                </div>
-            </a>
-            
-            <a href="https://github.com/qjack001/CISC-467-Implementation#coffee-for-fuzzy-logicians" class="card" style="color:#f68d2d;background-image: url('./img/fc.png');">
-                <div>
-                <h3>Coffee for Fuzzy Logicians</h3>
-                <p>A Fuzzy Expert System for at-home coffee brewing.</p>
-                </div>
-            </a>
-            
-            <a href="https://guinane.xyz/quinnwerks.github.io/" class="card" style="color:#2aa198;background-image: url('./img/qs.png');">
-                <div>
-                <h3>Quinn Smith</h3>
-                <p>A personal bio/resume website for my developer friend.</p>
-                </div>
-            </a>
-            
-            <a href="https://github.com/qjack001/Web-Based-Windows#--------web-based-windows" class="card" style="color:#000;background-image: url('./img/wb.png');">
-                <div>
-                <h3>Web-based Windows</h3>
-                <p>An experimental, brutalist website that imitates early Windows operating systems.</p>
-                </div>
-            </a>
-            
-            <a href="https://github.com/qjack001/Eye-Tracking-OS#--------" class="card" style="color:#3d46b0;background-image: url('./img/eo.png');">
-                <div>
-                <h3>EyeOS</h3>
-                <p>A gaze-based operating system, built as the cumulative project for Human-Computer Interaction.</p>
-                </div>
-            </a>
-            
-            <a href="https://github.com/qjack001/Letterboxd-Ratings-Remover" class="card" style="color:#bbccde;background-image: url('./img/rr.png');">
-                <div>
-                <h3>Ratings Remover</h3>
-                <p>A Chrome extension that removes ratings from Letterboxd to keep movies from being spoiled.</p>
-                </div>
-            </a>
-            
-            <a href="https://github.com/GoodByteCo/quinnpollock.net" class="card" id="quinn-card">
-                <div>
-                <h3>Quinn Pollock</h3>
-                <p>A personal website from my friend, used to host their ideas and projects.</p>
-                </div>
-            </a>
-            
-            <a href="https://github.com/qjack001/Magic-Smike#------" class="card" style="color:#000;background-image: url('./img/ms.png')">
-                <div>
-                <h3>Magic Smike</h3>
-                <p>Dashboard for IoT smart bike project.</p>
-                </div>
-            </a>
-            
-            <a href="https://github.com/qjack001/Time-Feel#time-feel" class="card" style="color:#fff;background-image: url('./img/tf.png')">
-                <div>
-                <h3>Time Feel</h3>
-                <p>A simple web app that gives you a feel for what time it is.</p>
-                </div>
-			</a>
-            
-            <a href="https://github.com/qjack001/Spotted#------" class="card" style="color:#2d8143;background-image: url('./img/sp.png');">
-                <div>
-                <h3>Spotted</h3>
-                <p>A website for spotting rad houseplants, and cataloging how to care for them.</p>
-                </div>
-            </a>
-            
-            <a href="https://github.com/qjack001/Digital-Business-Card#--------digital-business-card" class="card" style="color:#eee;background-image: url('./img/db.png');">
-                <div>
-                <h3>Digital Business Card</h3>
-                <p>A super-tiny personal website, stored in the URL itself.</p>
-                </div>
-            </a>
-            
-            <a href="https://github.com/qjack001/Brewhaha#--------brewhaha" class="card" style="color:#3d46b0;background-image: url('./img/bh.png');">
-                <div>
-                <h3>Brewhaha</h3>
-                <p>Web-menu for a fictional coffee shop.</p>
-                </div>
-            </a>
-            
-            <a href="https://guinane.xyz/The-Report/" class="card" style="color:#000;background-image: url('./img/tr.png');">
-                <div>
-                <h3>The Report</h3>
-                <p>A pretend newspaper for a D&amp;D game.</p>
-                </div>
-            </a>
-            
-            <a href="https://github.com/qjack001/Food-Box#--------foodbox" class="card" style="color:#222;background-image: url('./img/fb.png');">
-                <div>
-                <h3>FoodBox</h3>
-                <p>An IoT cat feeder, for the grade 12 cumulative AP Computer Science project.</p>
-                </div>
-            </a>
-            
-<!--
-            
-            <a href="https://guinane.xyz/FilmRPG" class="card" style="color:#fff;background-image: url('./img/ss.png');">
-                <div>
-                <h3>Silverscreen</h3>
-                <p>A TTRPG based on the logic of movies.</p>
-                </div>
-            </a>
--->
-            
-        </div>
-        
-        <a href="mailto:jackguinane@gmail.com" tabindex="1" id="mail-bubble" onfocus="showText()" onblur="hideText()" onmouseover="showText()" onmouseout="hideText()"><p id="mail">@</p></a>
-        <div id="mail-container">
-            <div id="circle">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-                    <defs>
-                        <path id="circlePath" d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
-                    </defs>
-                    <circle cx="150" cy="100" r="75" fill="none"/>
-                    <g>
-                        <use xlink:href="#circlePath" fill="none"/>
-                        <text fill="#ff4c1e">
-                            <textPath xlink:href="#circlePath">Email me! &nbsp; &nbsp; Email me! &nbsp; &nbsp; Email me! &nbsp; &nbsp; Email me!</textPath>
-                        </text>
-                    </g>
-                </svg>
-            </div>
-        </div>
-        <div id="frame"></div>
-
-        <script>
-            document.body.classList.add('loading');
-
-            function showPage() {document.body.classList.add('finished');}
-            function showText() {document.getElementById("mail-container").style.opacity = "1";}
-            function hideText() {document.getElementById("mail-container").style.opacity = "0";}
-            window.addEventListener("load", showPage);
-            window.onscroll = function()
-            {
-                var scrollPosY = window.pageYOffset | document.body.scrollTop; 
-                var logo = document.getElementById("logo");
-                if(scrollPosY > 300) 
-                {
-                    logo.className = ('');
-                } 
-                else if(scrollPosY <= 300) 
-                {
-                    logo.className =  ('hidden');
-                }
-            };
-        </script>
+		<div class="frame"/>
+		<Logo fixed/>
+		<main>
+			<section id="about-me">
+				<AboutMe/>
+			</section>
+			<section id="projects">
+				<ProjectsList/>
+			</section>
+		</main>
+		<BigButton text="Email me!" dir="right" href="mailto:jackguinane@gmail.com">@</BigButton>
     </body>
 </html>
+
+<style>
+	main
+	{
+		margin: 100px;
+	}
+
+	#about-me
+	{
+		max-width: 850px;
+	}
+
+	.frame
+	{
+		pointer-events: none;
+		z-index: -99;
+		position: fixed;
+		top: 20px;
+		left: 20px;
+		right: 20px;
+		bottom: 20px;
+		border: 2px solid var(--foreground);
+		border-radius: 3px;
+	}
+
+	@media screen and (max-width: 1020px)
+	{
+		main
+		{
+			margin: 100px 60px;
+		}
+	
+		#about-me
+		{
+			max-width: 700px;
+		}
+	}
+
+	@media screen and (max-width: 740px)
+	{
+		main
+		{
+			margin: 80px 50px;
+		}
+	}
+
+	@media screen and (max-width: 500px)
+	{
+		#about-me
+		{
+			position: fixed;
+			top: 40px;
+			left: 40px;
+			right: 40px;
+		}
+
+		#projects
+		{
+			position: absolute;
+			left: 0;
+			bottom: 20px;
+			overflow-x: scroll;
+		}
+	}
+</style>
