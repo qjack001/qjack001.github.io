@@ -9,7 +9,7 @@
 		"lint:fix": "eslint . --fix && textlint . --fix"
 	},
 	"dependencies": {
-		"astro": "^0.20.12"
+		"astro": "^0.20.11"
 	},
 	"devDependencies": {
 		"eslint-config-goodbyte-styleguide": "^0.0.7",
