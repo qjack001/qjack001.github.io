@@ -9,7 +9,6 @@
 		"lint:fix": "eslint . --fix && textlint . --fix"
 	},
 	"dependencies": {
-		"@astrojs/renderer-vue": "^0.1.9",
 		"astro": "^0.20.12"
 	},
 	"devDependencies": {
