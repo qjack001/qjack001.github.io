@@ -21,9 +21,9 @@
 				xml:space="preserve"
 			>
 				<defs>
-					<circle id="circlePath" cx="150"
-						cy="150" r="50"
-						fill="none"
+					<path
+						id="circlePath"
+						d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
 					/>
 				</defs>
 				<g>
@@ -64,7 +64,7 @@
 
 		methods: {
 			repeat: (text) => {
-				let times = Math.ceil(48 / text.length)
+				let times = Math.ceil(50 / text.length)
 				let textWithWhitespace = text + '\xa0\xa0\xa0' // non-breaking spaces
 				return textWithWhitespace.repeat(times)
 			},
