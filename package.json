@@ -4,10 +4,10 @@
 	"private": true,
 	"scripts": {
 		"dev": "astro dev",
-		"build": "convert:images && astro build",
+		"build": "npm run convert:images && astro build",
 		"lint": "eslint . && textlint .",
 		"lint:fix": "eslint . --fix && textlint . --fix",
-		"convert:images": "convert:avif && convert:webp",
+		"convert:images": "npm run convert:avif && npm run convert:webp",
 		"convert:avif": "avif --input=public/assets/*.png --output=public/assets --speed=0 --quality=30",
 		"convert:webp": "imagemin public/assets/*.png --out-dir=public/assets --plugin.webp.method=6 --plugin.webp.quality=40"
 	},
