@@ -21,8 +21,8 @@ const projects = Astro.fetchContent('../pages/project/*.md');
 					<p>{project.description}</p>
 				</div>
 				<picture>
-					<source type="image/avif" src={`/assets/${project.img}.avif`}/>
-					<source type="image/webp" src={`/assets/${project.img}.webp`}/>
+					<source type="image/avif" srcset={`/assets/${project.img}.avif`}/>
+					<source type="image/webp" srcset={`/assets/${project.img}.webp`}/>
 					<img src={`/assets/${project.img}.png`} alt={project.alt}/>
 				</picture>
 			</a>
