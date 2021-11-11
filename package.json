@@ -9,8 +9,8 @@
 		"lint:text": "textlint **/*.md",
 		"lint:fix": "eslint . --fix && textlint **/*.md --fix",
 		"convert:images": "npm run convert:avif && npm run convert:webp",
-		"convert:avif": "avif --input=dist/assets/**/*.png --output=dist/assets --speed=6 --quality=30",
-		"convert:webp": "imagemin dist/assets/**/*.png --out-dir=dist/assets --plugin.webp.method=6 --plugin.webp.quality=40"
+		"convert:avif": "avif --input=dist/assets/*.png --output=dist/assets --speed=6 --quality=30",
+		"convert:webp": "imagemin dist/assets/*.png --out-dir=dist/assets --plugin.webp.method=6 --plugin.webp.quality=40"
 	},
 	"dependencies": {
 		"astro": "0.20.0",
