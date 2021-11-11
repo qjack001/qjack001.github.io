@@ -6,6 +6,7 @@
 		"dev": "astro dev",
 		"build": "npm run convert:images && astro build",
 		"lint": "eslint . && textlint .",
+		"lint:text": "textlint .",
 		"lint:fix": "eslint . --fix && textlint . --fix",
 		"convert:images": "npm run convert:avif && npm run convert:webp",
 		"convert:avif": "avif --input=public/assets/*.png --output=public/assets --speed=0 --quality=30",
