@@ -12,8 +12,6 @@ updates:
       - qjack001
     assignees:
       - qjack001
-    commit-message:
-      include: scope
     labels:
       - "dependencies"
 
@@ -29,7 +27,5 @@ updates:
       - qjack001
     assignees:
       - qjack001
-    commit-message:
-      include: scope
     labels:
       - "dependencies"
