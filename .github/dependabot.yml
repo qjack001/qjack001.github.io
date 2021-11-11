@@ -13,7 +13,6 @@ updates:
     assignees:
       - qjack001
     commit-message:
-      prefix: Update imports 
       include: scope
     labels:
       - "dependencies"
@@ -31,7 +30,6 @@ updates:
     assignees:
       - qjack001
     commit-message:
-      prefix: Update imports 
       include: scope
     labels:
       - "dependencies"
