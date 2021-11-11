@@ -13,7 +13,7 @@
 		"convert:webp": "imagemin public/assets/*.png --out-dir=public/assets --plugin.webp.method=6 --plugin.webp.quality=40"
 	},
 	"dependencies": {
-		"astro": "0.20.11",
+		"astro": "0.20.0",
 		"avif": "^0.0.4",
 		"imagemin-cli": "^7.0.0",
 		"imagemin-webp": "^6.0.0"
