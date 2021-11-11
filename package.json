@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "astro dev",
-		"build": "npm run convert:images && astro build",
+		"build": "astro build && npm run convert:images && touch dist/.nojekyll",
 		"lint": "eslint . && textlint **/*.md",
 		"lint:text": "textlint **/*.md",
 		"lint:fix": "eslint . --fix && textlint **/*.md --fix",
