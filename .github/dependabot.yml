@@ -1,39 +1,37 @@
 version: 2
 updates:
-	# Fetch and update latest `npm` packages
-	- package-ecosystem: npm
-		directory: "/"
-		schedule:
-			interval: weekly
-			day: friday
-			time: "17:30"
-			timezone: America/Vancouver
-		open-pull-requests-limit: 10
-		reviewers:
-			- qjack001
-		assignees:
-			- qjack001
-		commit-message:
-			prefix: Update dependencies 
-			include: scope
-		labels:
-			- "dependencies"
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: friday
+      time: "17:30"
+      timezone: America/Vancouver
+    open-pull-requests-limit: 10
+    reviewers:
+      - qjack001
+    assignees:
+      - qjack001
+    commit-message:
+      prefix: Update dependencies 
+      include: scope
+    labels:
+      - "dependencies"
 
-	# Fetch and update latest `github-actions`
-	- package-ecosystem: github-actions
-		directory: "/"
-		schedule:
-			interval: weekly
-			day: friday
-			time: "17:30"
-			timezone: America/Vancouver
-		open-pull-requests-limit: 10
-		reviewers:
-			- qjack001
-		assignees:
-			- qjack001
-		commit-message:
-			prefix: Update dependencies 
-			include: scope
-		labels:
-			- "dependencies"
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: friday
+      time: "17:30"
+      timezone: America/Vancouver
+    open-pull-requests-limit: 10
+    reviewers:
+      - qjack001
+    assignees:
+      - qjack001
+    commit-message:
+      prefix: Update dependencies 
+      include: scope
+    labels:
+      - "dependencies"
