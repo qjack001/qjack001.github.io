@@ -148,6 +148,14 @@ const projects = Astro.fetchContent('../pages/project/*.md');
 		}
 	}
 
+	@media (max-width: 500px) and (max-height: 730px)
+	{
+		.grid
+		{
+			padding: 20px 40px;
+		}
+	}
+
 	@keyframes fade-card
 	{
 		from { opacity: 0; }
