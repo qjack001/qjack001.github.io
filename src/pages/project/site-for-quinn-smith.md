@@ -7,8 +7,11 @@ background: '#012a36'
 foreground: '#2aa198'
 accent: '#b58901'
 
-img: qs
-alt: alt test
+img: quinn-smith
+alt: Lines of HTML code from the website
+doodle: quinn-smith-doodle
+doodle_alt: A rough sketch of a JSON object describing data about Quinn
+invert: true
 
 #### External Links ####
 website: https://quinnwerks.github.io

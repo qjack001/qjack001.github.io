@@ -7,8 +7,10 @@ background: '#f0f0f0'
 foreground: '#111111'
 accent: '#fe564e'
 
-img: qp
-alt: alt test
+img: quinn-pollock
+alt: A picture of Quinn and their logo in the top left corner
+doodle: quinn-pollock-doodle
+doodle_alt: A sketch of Quinn's logo, a tattoo they have representing a qubit (i.e. non-binary bit)
 
 #### External Links ####
 website: https://quinnpollock.net

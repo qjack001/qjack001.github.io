@@ -7,8 +7,10 @@ background: '#f2fbe1'
 foreground: '#1D6C31'
 accent: '#8EB45E'
 
-img: sp
-alt: alt test
+img: spotted-site
+alt: Dense foliage surrounds the text
+doodle: spotted-site-doodle
+doodle_alt: A sketch of three potted plants drawn in a row
 
 #### External Links ####
 website: https://guinane.xyz/Time-Feel/

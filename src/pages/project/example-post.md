@@ -13,6 +13,8 @@ accent: '#f68d2d'
 img: example                  # ID of project's background image (used on cards) 
 alt: description of image...  # alt text for project background image
 doodle: example-doodle        # ID of projects doodle illustration (shown on project page)
+# invert: true                # doodle should be inverted (white pencil)
+doodle_alt: description of doodle...
 
 #### External Links ####
 # website: https://... # link to website

@@ -1,14 +1,17 @@
 ---
 title: Ratings Remover
-description: A Chrome extension that removes ratings from Letterboxd to keep movies from being spoiled.
+description: A browser extension that removes ratings from Letterboxd to  avoid spoilers.
 year: 2019
 
 background: '#1c2229'
 foreground: '#adbecf'
 accent: '#01d851'
 
-img: rr
-alt: alt test
+img: ratings-remover
+alt: Icon for the browser extension and 5 stars drawn in a dashed line
+doodle: ratings-remover-doodle
+doodle_alt: A sketch of 5 stars, each faded more than the last, until finally disappearing altogether 
+invert: true
 
 #### External Links ####
 website: https://goodbyteco.github.io/Letterboxd-Ratings-Remover/
