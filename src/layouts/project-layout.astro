@@ -42,11 +42,11 @@ const { content } = Astro.props;
 							}
 						/>
 					</div>
-					<!-- <picture class="hero-img">
-						<source type="image/avif" src={`/assets/${content.img}.avif`}/>
-						<source type="image/webp" src={`/assets/${content.img}.webp`}/>
-						<img src={`/assets/${content.img}.png`} alt={content.alt}/>
-					</picture> -->
+					<picture class={(content.invert) ? 'inverted hero-img' : 'hero-img'}>
+						<source type="image/avif" srcset={`/assets/${content.doodle}.avif`}/>
+						<source type="image/webp" srcset={`/assets/${content.doodle}.webp`}/>
+						<img src={`/assets/${content.doodle}.png`} alt={content.doodle_alt}/>
+					</picture>
 				</div>
 			</section>
 			<section id="content" class="frame">
@@ -100,13 +100,25 @@ const { content } = Astro.props;
 	{
 		grid-column: 1;
 		grid-row: 1;
-		position: absolute;
+
+		text-align: center;
+		align-self: center;
+
+		mix-blend-mode: multiply;
+	}
+
+	.inverted.hero-img
+	{
+		filter: invert(100%);
+		mix-blend-mode: screen;
 	}
 
 	.hero-img img
 	{
-		max-width: 50%;
-		max-height: 800px;
+		width: 80%;
+		max-width: 350px;
+		max-height: 250px;
+		object-fit: contain;
 	}
 
 	#content
