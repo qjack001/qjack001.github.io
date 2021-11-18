@@ -1,7 +1,9 @@
 <template>
 	<ul>
 		<li v-for="(link, index) in links" :key="index">
-			<a v-if="link.href" :href="link.href">
+			<a v-if="link.href" :href="link.href" 
+				target="_blank" rel="noopener noreferrer"
+			>
 				{{ link.name }}
 			</a>
 			<template v-else>
