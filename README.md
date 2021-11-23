@@ -15,13 +15,13 @@ For more on that, see: [_Deployment_](#deployment).
 ```bash
 ├─ .github/       # workflow scripts for build & deploy
 ├┬ public/
-│└─ assets/        # static files, images
+│└─ assets/       # static files, images
 └┬ src/
- ├─ components/    # the (mostly Vue) components
- ├─ layouts/       # templates for project pages & notes
+ ├─ components/   # the (mostly Vue) components
+ ├─ layouts/      # templates for project pages & notes
  └┬ pages/
-  ├─ project/      # all the project pages, in markdown
-  └─ index.html    # the homepage
+  ├─ project/     # all the project pages, in markdown
+  └─ index.html   # the homepage
 ```
 
 ### Local Development
