@@ -2,7 +2,7 @@
 
 My personal website.
 
-![screenshot of the website](./.github/screenshots/desktop.png)
+![Screenshot of the website](./.github/screenshots/desktop.png)
 
 ## Operational Notes
 
