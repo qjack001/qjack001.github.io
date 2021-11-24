@@ -13,8 +13,8 @@ doodle: spotted-site-doodle
 doodle_alt: A sketch of three potted plants drawn in a row
 
 #### External Links ####
-website: https://guinane.xyz/Time-Feel/
-github: https://github.com/qjack001/Time-Feel
+website: https://guinane.xyz/Spotted/
+github: https://github.com/qjack001/Spotted
 
 layout: ../../layouts/project-layout.astro
 ---

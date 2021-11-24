@@ -16,6 +16,7 @@ invert: true
 #### External Links ####
 website: https://guinane.xyz/CISC-467-Implementation/
 read: https://github.com/qjack001/CISC-467-Implementation/blob/main/JackGuinane-CISC467-TermPaper.pdf
+github: https://github.com/qjack001/CISC-467-Implementation # temp
 
 layout: ../../layouts/project-layout.astro
 ---
