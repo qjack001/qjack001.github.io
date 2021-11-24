@@ -21,7 +21,9 @@
 		"dist": true,
 		".eslintrc": true,
 		".textlintrc": true,
-		"astro.config.mjs": true
+		"astro.config.mjs": true,
+		"public/assets/**/*.avif": true,
+		"public/assets/**/*.webp": true
 	},
 	"cSpell.words": [
 		"guinane"

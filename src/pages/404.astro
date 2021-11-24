@@ -1,0 +1,79 @@
+---
+import Metadata from "../components/metadata.astro"
+import GlobalStyle from "../components/global-style.astro"
+import Logo from "../components/logo.vue"
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <Metadata/>
+		<meta name="theme-color" content="#f0f8ff" media="(prefers-color-scheme: light)">
+		<meta name="theme-color" content="#05f" media="(prefers-color-scheme: dark)">
+        <title>Page not found | Jack Guinane</title>
+		<GlobalStyle/>
+    </head>
+    <body>
+		<div class="frame"/>
+		<Logo fixed/>
+		<main>
+			<section>
+				<h1 class="outline">
+					404
+				</h1>
+				<p>
+					Looks like I might have moved the furniture around while you weren't looking.
+					Sorry about that. <a href="https://guinane.xyz">Let's go home</a>.
+				</p>
+			</section>
+		</main>
+    </body>
+</html>
+
+<style>
+	main
+	{
+		position: absolute;
+		z-index: -99;
+		top: 20px;
+		left: 20px;
+		right: 20px;
+		bottom: 20px;
+
+		display: grid;
+		align-items: center;
+		text-align: center;
+		padding: 20px;
+
+		border: 2px solid var(--foreground);
+		border-radius: 3px;
+		font-size: 24px;
+	}
+
+	h1
+	{
+		font-size: 4em;
+		margin: 0;
+		line-height: 1;
+		letter-spacing: -0.02em;
+	}
+
+	p
+	{
+		font-size: 1em;
+		max-width: 50ch;
+		margin: 50px auto;
+	}
+
+	a
+	{
+		color: var(--accent);
+		text-decoration: none;
+		text-shadow: 3px 2px var(--background),
+		            -3px 2px var(--background);
+
+		background-image: linear-gradient(var(--accent), var(--accent));
+		background-size: 100% 1.7px;
+		background-position: left bottom;
+		background-repeat: no-repeat;
+	}
+</style>
