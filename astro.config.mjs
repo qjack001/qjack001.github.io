@@ -1,1 +1,4 @@
-export default ({ renderers: [ '@astrojs/renderer-vue' ]})
+export default ({
+	renderers: [ '@astrojs/renderer-vue' ],
+	buildOptions: { site: 'https://guinane.xyz' },
+})
