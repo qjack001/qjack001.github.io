@@ -19,7 +19,7 @@
 		"astro": "0.21.10",
 		"avif": "^0.0.4",
 		"imagemin-cli": "^7.0.0",
-		"imagemin-webp": "^6.0.0"
+		"imagemin-webp": "^7.0.0"
 	},
 	"devDependencies": {
 		"eslint-config-goodbyte-styleguide": "^0.0.7",
