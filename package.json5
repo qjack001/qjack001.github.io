@@ -2,28 +2,30 @@
 	name: 'guinane.xyz',
 	version: '2.0.0',
 	private: true,
-	engines: {
-        "node": ">=16",
-        "pnpm": ">=6",
+	engines:
+	{
+		node: '>=16',
+		pnpm: '>=6',
 	},
-	scripts: {
-		dev: 'pnpm run local:images && astro dev',
-		build: 'astro build && pnpm run convert:images && touch dist/.nojekyll',
-		lint: 'eslint . && textlint **/*.md',
-		'lint:fix': 'eslint . --fix && textlint **/*.md --fix',
-		'convert:images': 'pnpm run convert:avif && pnpm run convert:webp',
+	scripts:
+	{
+		dev: 'pnpm run local:img && astro dev',
+		build: 'astro build && pnpm run convert:img && touch dist/.nojekyll',
+		lint: 'eslint .',
+		'convert:img': 'pnpm run convert:avif && pnpm run convert:webp',
 		'convert:avif': 'avif --input=dist/assets/*.png --output=dist/assets --speed=0 --quality=50',
 		'convert:webp': 'imagemin dist/assets/*.png --out-dir=dist/assets --plugin.webp.method=6 --plugin.webp.quality=50',
-		'local:images': 'pnpm run local:avif && pnpm run local:webp',
+		'local:img': 'pnpm run local:avif && pnpm run local:webp',
 		'local:avif': 'avif --input=public/assets/*.png --output=public/assets --speed=6 --quality=50 --overwrite',
 		'local:webp': 'imagemin public/assets/*.png --out-dir=public/assets --plugin.webp.method=1 --plugin.webp.quality=50',
 	},
-	devDependencies: {
-		'astro': '0.23.7',
+	devDependencies:
+	{
+		'astro': '0.23.7', // pin until out of beta
 		'autoprefixer': '^10.4.2',
 		'avif': '^0.1.0',
-		'eslint-config-goodbyte-styleguide': '^0.0.7',
 		'imagemin-cli': '^7.0.0',
 		'imagemin-webp': '^7.0.0',
+		'eslint-config-goodbyte-styleguide': '^0.0.7',
 	},
 }

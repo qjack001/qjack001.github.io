@@ -42,7 +42,7 @@ pnpm run dev
 
 PNG images in the [`public/assets/`](./public/assets) directory will be automatically converted into
 both `webp` and `avif` formats. The image conversion occurs at compile-time, and is configured by
-the `convert:images` and `local:images` npm scripts (located in the [package.json](./package.json)).
+the `convert:img` and `local:img` npm scripts (located in the [package.json](./package.json)).
 
 ### Styleguide
 
@@ -55,7 +55,7 @@ The project can be linted by running:
 
 ```bash
 pnpm run lint
-pnpm run lint:fix  # will try to fix any issues
+pnpm run lint -- --fix  # will try to fix any issues
 ```
 
 While this works fine enough, it is recommended that you install the
