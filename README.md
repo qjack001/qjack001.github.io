@@ -13,15 +13,15 @@ For more on that, see: [_Deployment_](#deployment).
 ### Project Structure
 
 ```bash
-├─ .github/       # workflow scripts for build & deploy
-├┬ public/
-│└─ assets/       # static files, images
-└┬ src/
- ├─ components/   # the (mostly Vue) components
- ├─ layouts/      # templates for project pages & notes
- └┬ pages/
-  ├─ project/     # all the project pages, in markdown
-  └─ index.html   # the homepage
+├─ .github/           # scripts for build & deploy
+├─ public/
+│  └─ assets/         # static files, images
+└─ src/
+   ├─ components/     # the (mostly Vue) components
+   ├─ layouts/        # templates for project pages
+   └─ pages/
+      ├─ project/     # project pages, in markdown
+      └─ index.html   # the homepage
 ```
 
 ### Local Development
@@ -46,10 +46,9 @@ the `convert:img` and `local:img` npm scripts (located in the [package.json](./p
 
 ### Styleguide
 
-This project follows the [Goodbyte Styleguide](https://github.com/GoodbyteCo/Styleguide) for Vue and
-Markdown files. This is enforced with an [ESLint](./.eslintrc) and [textlint](./.textlintrc) config.
-Every push to the `main` branch is checked against these styleguides, and changes that are not
-formatted accordingly will fail.
+This project follows the [Goodbyte Styleguide](https://github.com/GoodbyteCo/Styleguide),
+enforced with an [ESLint](./.eslintrc) config. Every push to the `main` branch is checked
+against the styleguide, and changes that are not formatted accordingly will fail.
 
 The project can be linted by running:
 
