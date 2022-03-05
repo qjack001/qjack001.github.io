@@ -12,6 +12,7 @@
 		--roundness: 4px;
 
 		--white: #fff;
+		--almost-white-blue: #d0e2ff;
 		--light-blue: #f0f8ff;
 		--dark-blue: #05f;
 		--red: #ff4c1e;
@@ -45,7 +46,8 @@
 		text-shadow: none;
 	}
 
-	.outline
+	.outline,
+	.formatted-markdown p:first-child::first-letter
 	{
 		color: var(--white);
 		-webkit-text-stroke-width: 2px;
@@ -67,6 +69,16 @@
 			-4px -3px var(--background),
 			-4px  0px var(--background),
 			-4px  3px var(--background);
+	}
+
+	.formatted-markdown p:first-child::first-letter
+	{
+		padding-inline-end: 0.2em;
+
+		font-size: 3em;
+		font-weight: bold;
+		float: left;
+		line-height: 1;
 	}
 
 	@font-face

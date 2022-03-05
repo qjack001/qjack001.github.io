@@ -9,7 +9,7 @@ const projects = Astro.fetchContent('../pages/project/*.md');
 		.map((project, n) => (
 			<a
 				class="card"
-				href={project.github}
+				href={project.url}
 				style={`
 					--background: ${project.background};
 					--foreground: ${project.foreground};

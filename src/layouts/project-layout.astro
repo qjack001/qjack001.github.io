@@ -1,6 +1,7 @@
 ---
 import Metadata from '../components/metadata.astro'
 import GlobalStyle from '../components/global-style.astro'
+import MarkdownStyle from '../components/markdown-style.vue'
 import Logo from '../components/logo.vue'
 import BigButton from '../components/big-button.vue'
 import BigText from '../components/big-text.vue'
@@ -50,7 +51,9 @@ const { content } = Astro.props;
 				</div>
 			</section>
 			<section id="content" class="frame">
-				<slot/>
+				<MarkdownStyle>
+					<slot/>
+				</MarkdownStyle>
 			</section>
 		</article>
 	</body>
@@ -105,6 +108,7 @@ const { content } = Astro.props;
 		align-self: center;
 
 		mix-blend-mode: multiply;
+		animation: fade-in 1.5s var(--ease); 
 	}
 
 	.inverted.hero-img
@@ -125,6 +129,7 @@ const { content } = Astro.props;
 	{
 		border-top: none;
 		border-radius: 0 0 3px 3px;
+		padding-top: 80px;
 	}
 
 	@media screen and (max-width: 740px)
@@ -139,5 +144,16 @@ const { content } = Astro.props;
 		{
 			display: none;
 		}
+
+		#content
+		{
+			padding-top: 20px;
+		}
+	}
+
+	@keyframes fade-in
+	{
+		from { opacity: 0; }
+		to   { opacity: 1; }
 	}
 </style>
