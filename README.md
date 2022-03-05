@@ -29,13 +29,13 @@ For more on that, see: [_Deployment_](#deployment).
 Clone the repository, and install the dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 To build the website and host it locally, run:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 ### Images
@@ -54,8 +54,8 @@ formatted accordingly will fail.
 The project can be linted by running:
 
 ```bash
-npm run lint
-npm run lint:fix  # will try to fix any issues
+pnpm run lint
+pnpm run lint:fix  # will try to fix any issues
 ```
 
 While this works fine enough, it is recommended that you install the
@@ -111,7 +111,7 @@ The declarations can be found in the [global-style.astro](./src/components/globa
 
 All commits and merges into the `main` branch automatically trigger a build of the site. A Github
 workflow script ([deploy.yml](./.github/workflows/deploy.yml)) checks out the repository and runs
-`npm run build`. The outputted `dist/` folder (containing the statically built site) is then
+`pnpm run build`. The outputted `dist/` folder (containing the statically built site) is then
 pushed to the [`compiled-site`](https://github.com/qjack001/qjack001.github.io/tree/compiled-site)
 branch. Unless completely necessary, avoid committing directly to the `compiled-site` branch, as
 your changes will be overridden by any future deployments.
@@ -119,6 +119,6 @@ your changes will be overridden by any future deployments.
 Github Pages is configured to host the branch at [guinane.xyz](https://guinane.xyz) as-is (i.e.
 without treating it as a Jekyll site). This is achieved by first adding a [`CNAME`](./public/CNAME)
 file to the `public/` directory, so that it is added to the root of the `dist/` folder, and
-subsequently the `compiled-site` branch. Second, the `npm run build` script is appended with
+subsequently the `compiled-site` branch. Second, the `pnpm run build` script is appended with
 `touch dist/.nojekyll`, creating an empty file that tells Github Pages not to run any Jekyll
 post-processing.

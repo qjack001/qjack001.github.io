@@ -20,9 +20,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
+      
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 6.0.2
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Run eslint
         uses: wearerequired/lint-action@v1
@@ -31,4 +36,4 @@ jobs:
           eslint_extensions: js,vue
 
       - name: Run textlint
-        run: npm run lint:text
+        run: pnpm run lint:text

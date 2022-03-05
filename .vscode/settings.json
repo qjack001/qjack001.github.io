@@ -10,22 +10,29 @@
 	"textlint.autoFixOnSave": true,
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": true,
-		"source.fixAll.stylelint": true
+		"source.fixAll.stylelint": true,
 	},
 	"files.exclude": {
 		"**/.git": true,
 		".gitignore": true,
 		"**/.DS_Store": true,
-		"package-lock.json": true,
+		"pnpm-lock.yaml": true,
 		"node_modules": true,
 		"dist": true,
 		".eslintrc": true,
 		".textlintrc": true,
 		"astro.config.mjs": true,
+		"postcss.config.cjs": true,
 		"public/assets/**/*.avif": true,
-		"public/assets/**/*.webp": true
+		"public/assets/**/*.webp": true,
 	},
 	"cSpell.words": [
-		"guinane"
-	]
+		"guinane",
+	],
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [{
+			"scope": "string.key.json5",
+			"settings": { "foreground": "#8BDEDB" },
+		}],
+	},
 }
