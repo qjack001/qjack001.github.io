@@ -34,6 +34,3 @@ jobs:
         with:
           eslint: true
           eslint_extensions: js,vue
-
-      - name: Run textlint
-        run: pnpm run lint:text
