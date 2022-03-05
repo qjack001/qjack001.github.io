@@ -2,6 +2,10 @@
 	name: 'guinane.xyz',
 	version: '2.0.0',
 	private: true,
+	engines: {
+        "node": ">=16",
+        "pnpm": ">=6",
+	},
 	scripts: {
 		dev: 'pnpm run local:images && astro dev',
 		build: 'astro build && pnpm run convert:images && touch dist/.nojekyll',
@@ -16,12 +20,10 @@
 	},
 	devDependencies: {
 		'astro': '0.23.7',
-		'@astrojs/renderer-vue': '^0.4.0',
 		'autoprefixer': '^10.4.2',
 		'avif': '^0.1.0',
 		'eslint-config-goodbyte-styleguide': '^0.0.7',
 		'imagemin-cli': '^7.0.0',
 		'imagemin-webp': '^7.0.0',
-		'textlint-rule-preset-goodbyte-styleguide': '^0.0.5',
 	},
 }
