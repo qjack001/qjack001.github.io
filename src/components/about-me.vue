@@ -4,7 +4,7 @@
 	</screen-reader>
 	<big-text animate>
 		<p class="outline">
-			I’m <strong>Jack Guinane</strong>, a developer with big dreams making little websites.
+			I’m <strong>Jack Guinane</strong>, a developer with big dreams of making little websites.
 		</p>
 	</big-text>
 	<link-list
